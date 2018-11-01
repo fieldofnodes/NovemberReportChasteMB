@@ -132,9 +132,9 @@
 
 % Define document title and author
 	\title{Creating forces in chaste}
-	\author{Firstname Lastname
-	\thanks{Advisor: Dipl.--Ing.~Firstname Lastname, Lehrstuhl f\"ur Nachrichtentechnik, TUM, WS 2050/2051.}}
-	\markboth{Hauptseminar Digitale Kommunikationssysteme}{}
+	\author{Jonathan Miuller
+	\thanks{Advisor: Dr. Phillip Murray}}
+	\markboth{Mathematical Biology: alignment and attractive ends forces}{}
 	\maketitle
 
 % Write abstract here
@@ -145,7 +145,11 @@
 % Each section begins with a \section{title} command
 \section{Introduction}
 	% \PARstart{}{} creates a tall first letter for this first paragraph
-	\PARstart{T}{his} section introduces the topic and leads the reader on to the main part.
+	\PARstart{F}{orces} implemented in Chaste are developed for simulation advantages. Initially we worked on a repulsion force ensuring capsules do not visiulaise with overlapping spheres (\textbf{See: Hertz model?}), subsequently experimentalists observe that certain bacteria will grow a population that is chain like in formation. As a response to these findings (\textbf{data?}) we have worked on implementing the following into the chaste project.
+	\begin{enumerate}
+	    \item An adhesion force applied only the to ends of simulated bacteria capsules
+	    \item An alignment force applied to capsules, causing straight line alignments
+	\end{enumerate}
 
 % Main Part
 \section{Main Part}
