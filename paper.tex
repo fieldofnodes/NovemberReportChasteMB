@@ -135,23 +135,23 @@
 
 % Define document title and author
 	\title{Creating forces in chaste}
-	\author{Jonathan Miuller
+	\author{Jonathan Miller
 	\thanks{Advisor: Dr. Phillip Murray}}
 	\markboth{Mathematical Biology: alignment and attractive ends forces}{}
 	\maketitle
 
 % Write abstract here
 \begin{abstract}
-	The short abstract (50-80 words) is intended to give the reader an overview of the work.
+	 Bacilli is the name given to any bacteria shaped like a rod. Chaste (Cancer, Heart and Soft Tissue Environment) has accommodated bacilli bacteria populations by developing an intersecting spheres model to maintain the rod like shape of bacteria during interaction. This \textbf{capsule force} is designed to ensure no capsule overlaps another capsule. As is known Streptobacilli is the name given to bacilli arranged in a chain. Chaste had not developed models to accommodate such chains.
 \end{abstract}
 
 % Each section begins with a \section{title} command
 \section{Introduction}
 	% \PARstart{}{} creates a tall first letter for this first paragraph
-	\PARstart{F}{orces} implemented in Chaste are developed for simulation advantages. Initially we worked on a repulsion force ensuring capsules do not visiulaise with overlapping spheres (\textbf{See: Hertz model?}), subsequently experimentalists observe that certain bacteria will grow a population that is chain like in formation. As a response to these findings (\textbf{data?}) we have worked on implementing the following into the chaste project.
+	\PARstart{F}{orces} are implemented in Chaste to aid in understanding of natural phenomena. These forces are developed for simulation advantages. Chaste can currently simulate up to three dimensions of simulations with \textit{cell-centre} and vertex \textit{vertex-based} cell populations. It can define different force laws for cell to cell interaction, different cell cycles, different cell proliferative types, to say a few \cite{ChasteCell}. Using an \textit{agile} approach to software development, Chaste develops new projects in directive intense bursts of code development, followed up by refactoring. In a recent code development burst, bacilli shaped cells were developed into working forces of cell cell interactions. This \textbf{capsule force}, $F_c$, operates when two capsules have overlapped by some distance $d$. A repulsive force is applied to the location of any and all capsules with a $d > 0$, meaning the capsules are overlapping by $d$. This $F_c$ only ensure no two capsules will overlap, it does nothing to affecting the topology of the population, namely developing force laws that do two tasks:
 	\begin{enumerate}
-	    \item An adhesion force applied only the to ends of simulated bacteria capsules
-	    \item An alignment force applied to capsules, causing straight line alignments
+	    \item Adhesion of capsules at their end points
+	    \item Alignment of capsules with angles, $\theta_i < \frac{\pi}{2}$, between any two neighboring capsules, for $i\in P$, $P$ being the population of cells.
 	\end{enumerate}
 
 % Main Part
@@ -182,11 +182,9 @@ Such that we seek to find the minimum of $E$.
 \begin{thebibliography}{5}
 
 	%Each item starts with a \bibitem{reference} command and the details thereafter.
-	\bibitem{HOP96} % Transaction paper
-	J.~Hagenauer, E.~Offer, and L.~Papke. Iterative decoding of binary block
-	and convolutional codes. {\em IEEE Trans. Inform. Theory},
-	vol.~42, no.~2, pp.~429–-445, Mar. 1996.
-
+	\bibitem{ChasteCell}
+	Chaste (Cancer, Heart and Soft Tissue Environment) Cell-based Chaste: a multiscale computational framework for modelling cell populations
+	\url{http://www.cs.ox.ac.uk/chaste/cell_based_index.html}
 	\bibitem{MJH06} % Conference paper
 	T.~Mayer, H.~Jenkac, and J.~Hagenauer. Turbo base-station cooperation for intercell interference cancellation. {\em IEEE Int. Conf. Commun. (ICC)}, Istanbul, Turkey, pp.~356--361, June 2006.
 
