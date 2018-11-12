@@ -107,6 +107,7 @@
 \usepackage{amssymb}
 \usepackage{mathtools}
 \usepackage{physics}
+\usepackage{float}
 
 % Other popular packages for formatting tables and equations include:
 
@@ -157,11 +158,24 @@
 % Main Part
 \section{Bacterial Capsules}
 	Consider a bacterial capsule to be the construction of a cylinder and two hemispheres, such that a capsule is formed in $\mathbb{R}^n$. Let each capsule be $C_i$ and the determining attributes be a length $l_i$ and a radius $r_i$, such that $C_i = l_i+r_i$. This capsule is abstracted to a a problem of sliding spheres on rods and hence is a matter of intersecting spheres. When two capsules interact, say $C_i$ and $C_j$, there is said to be an \textbf{adhesive force} if each capsule, at its end points touches. If this criterion is met, then the capsules will adhere to each other. If the angle, $\theta$, that is the angle found to be between the two capsules, is $\frac{\pi}{2} \leq \theta \leq \pi $, then an \textbf{alignment force} will be applied to each capsule so that over time, the capsules will converge to $\theta = \pi$.
-	\begin{figure}
+	\begin{figure}[H]
 	    \centering
 	    \includegraphics[scale = 0.22]{TwoCapsules.png}
 	    \caption{Rod shaped capsules visualised in ParaView}
 	    \label{fig:two capsules}
+	\end{figure}
+		\begin{figure}[H]
+	    \centering
+	    \includegraphics[scale = 0.32]{AnatomyOfCapsules.png}
+	    \caption{Anatomy of a capsule}
+	    \label{fig:two capsules}
+	\end{figure}
+	Consider that a capsule is considered to be the sum of a tube and two hemispheres, then for capsule \textbf{a}, say $C_a$ is $C_a=2r_a+l_a$. Then this model of capsules can be reduced to models of intersecting spheres. Suppose then, that two capsules overlap.
+	\begin{figure}
+	    \centering
+	    \includegraphics{}
+	    \caption{Caption}
+	    \label{fig:my_label}
 	\end{figure}
 \section{Forces}
 
