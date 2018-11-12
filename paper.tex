@@ -148,15 +148,21 @@
 % Each section begins with a \section{title} command
 \section{Introduction}
 	% \PARstart{}{} creates a tall first letter for this first paragraph
-	\PARstart{F}{orces} are implemented in Chaste to aid in understanding of natural phenomena. These forces are developed for simulation advantages. Chaste can currently simulate up to three dimensions of simulations with \textit{cell-centre} and vertex \textit{vertex-based} cell populations. It can define different force laws for cell to cell interaction, different cell cycles, different cell proliferative types, to say a few \cite{ChasteCell}. Using an \textit{agile} approach to software development, Chaste develops new projects in directive intense bursts of code development, followed up by refactoring. In a recent code development burst, bacilli shaped cells were developed into working forces of cell cell interactions. This \textbf{capsule force}, $F_c$, operates when two capsules have overlapped by some distance $d$. A repulsive force is applied to the location of any and all capsules with a $d > 0$, meaning the capsules are overlapping by $d$. This $F_c$ only ensure no two capsules will overlap, it does nothing to affecting the topology of the population, namely developing force laws that do two tasks:
+	\PARstart{F}{orces} are implemented in Chaste to aid in understanding of natural phenomena. These forces are developed for simulation advantages. Chaste can currently visualise up to three dimensions of simulations with \textit{cell-centre} and vertex \textit{vertex-based} cell populations. It can define different force laws for cell to cell interaction, different cell cycles, different cell proliferative types, to say a few \cite{ChasteCell}. Using an \textit{agile} approach to software development, Chaste develops new projects in directive intense bursts of code development, followed up by refactoring. In a recent code development burst, bacilli shaped cells were developed into working forces of cell cell interactions. This \textbf{capsule force}, $F_c$, operates when two capsules have overlapped by some distance $d$. A repulsive force is applied to the location of any and all capsules with a $d > 0$, meaning the capsules are overlapping by $d$. This $F_c$ only ensure no two capsules will overlap, it does nothing to affecting the topology of the population, namely developing force laws that do two tasks:
 	\begin{enumerate}
 	    \item Adhesion of capsules at their end points
 	    \item Alignment of capsules with angles, $\theta_i < \frac{\pi}{2}$, between any two neighboring capsules, for $i\in P$, $P$ being the population of cells.
 	\end{enumerate}
-
+    This report will outline the progress of developing Chaste code to accommodate \textbf{(1)} and \textbf{(2)}. Furthermore, this report will detail visuals relating to development of code. 
 % Main Part
 \section{Bacterial Capsules}
 	Consider a bacterial capsule to be the construction of a cylinder and two hemispheres, such that a capsule is formed in $\mathbb{R}^n$. Let each capsule be $C_i$ and the determining attributes be a length $l_i$ and a radius $r_i$, such that $C_i = l_i+r_i$. This capsule is abstracted to a a problem of sliding spheres on rods and hence is a matter of intersecting spheres. When two capsules interact, say $C_i$ and $C_j$, there is said to be an \textbf{adhesive force} if each capsule, at its end points touches. If this criterion is met, then the capsules will adhere to each other. If the angle, $\theta$, that is the angle found to be between the two capsules, is $\frac{\pi}{2} \leq \theta \leq \pi $, then an \textbf{alignment force} will be applied to each capsule so that over time, the capsules will converge to $\theta = \pi$.
+	\begin{figure}
+	    \centering
+	    \includegraphics{}
+	    \caption{Caption}
+	    \label{fig:my_label}
+	\end{figure}
 \section{Forces}
 
 \subsubsection{Capsules}
